@@ -3,6 +3,7 @@ import styled, {css} from "styled-components/native";
 export const Container = styled.View`
   ${({theme}) => css`
     flex: 1;
-    background-color: ${theme.colors.backgroundWater} ;
+    background-color: ${theme.colors.backgroundGray}; 
+    padding:15px ;
     `}
     `;
