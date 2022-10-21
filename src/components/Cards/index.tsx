@@ -4,6 +4,7 @@ import * as S from "./styles";
 
 import dots from "../../assets/img/dots.png";
 import PokeBall from "../../assets/img/pokeballCard.png";
+import FadeAnimation from "../FadeAnimation";
 
 export type PokemonTypes = {
   type: {
@@ -52,11 +53,13 @@ export function Card({ data, ...rest }: Props) {
         {loading ? (
           <ActivityIndicator size="large" />
         ) : (
-          <S.PokemonImage
-            source={{
-              uri: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`,
-            }}
-          />
+          <FadeAnimation>
+            <S.PokemonImage
+              source={{
+                uri: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`,
+              }}
+            />
+          </FadeAnimation>
         )}
       </S.RightSide>
     </S.ContainerCard>

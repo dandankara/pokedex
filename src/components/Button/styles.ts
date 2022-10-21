@@ -17,6 +17,6 @@ export const Title = styled.Text`
   justify-content: center;
   font-size:24px;
   ${({theme}) => css`
-    color:${theme.colors.textGrayTitle} ;
+    color:${theme.colors.background} ;
   `}
 `;

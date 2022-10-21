@@ -22,7 +22,7 @@ export default function FadeAnimation({
   const cardOffSet = useSharedValue(0.25 * displayWidth);
 
   const animatedStyle = useAnimatedStyle(() => {
-    // executa uma função sincrona na tela do usuário
+    // executa uma função sincrona na tela do
     "worklet";
     return {
       opacity: cardOpacity.value,

@@ -1,15 +1,20 @@
-import { View, Text } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  TouchableOpacityProps,
+} from "react-native";
 import React from "react";
 
 import * as S from "./styles";
 
-interface TextProps {
+type TextProps = {
   title: string;
-}
+} & TouchableOpacityProps;
 
-export default function Button({ title }: TextProps) {
+export default function Button({ title, ...rest }: TextProps) {
   return (
-    <S.Container>
+    <S.Container {...rest}>
       <S.Title>{title}</S.Title>
     </S.Container>
   );
